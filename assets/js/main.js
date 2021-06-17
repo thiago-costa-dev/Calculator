@@ -20,13 +20,10 @@ function setOnDisplay(e) {
 
     resetDisplayAfterErro();
 
-    if (endWithOperator(element)) return;
-
-    if (endWithPoint(element)) return;
-
-    if (startWithZero(element)) return;
-
-    if (startWithOperator(element)) return;
+    if (endWithOperator(element) ||
+        endWithPoint(element) ||
+        startWithZero(element) ||
+        startWithOperator(element)) return;
 
     displayResult.value += element.innerText;
 };
